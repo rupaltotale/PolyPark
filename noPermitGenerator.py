@@ -9,13 +9,13 @@ class NoPermitLot:
 
 def createRandomLots(lotNameList):
     lotsList = []
-    hoursDict = {"Monday" : [7,5],\
-                 "Tuesday" : [7,5],\
-                 "Wednesday" : [7,5],\
-                 "Thursday" : [7,5],\
-                 "Friday" : [7,5],\
-                 "Saturday" : [7,5],\
-                 "Sunday" : [7,5]}
+    hoursDict = {"Monday" : [7,17],\
+                 "Tuesday" : [7,17],\
+                 "Wednesday" : [7,17],\
+                 "Thursday" : [7,17],\
+                 "Friday" : [7,17],\
+                 "Saturday" : [7,17],\
+                 "Sunday" : [7,17]}
     for lotName in lotNameList:
         lot = NoPermitLot(lotName, hoursDict, [0, 0], 8.50)
         lotsList.append(lot);
