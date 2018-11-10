@@ -1,0 +1,91 @@
+{
+"ParkingLot" : "A1",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}{
+"ParkingLot" : "C3",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}{
+"ParkingLot" : "C4",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}{
+"ParkingLot" : "C5",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}{
+"ParkingLot" : "South Perimeter",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}{
+"ParkingLot" : "College Avenue",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}{
+"ParkingLot" : "Grand Avenue Structure",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}{
+"ParkingLot" : "Grand Avenue",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}{
+"ParkingLot" : "H2",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}{
+"ParkingLot" : "H4",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}{
+"ParkingLot" : "H10",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}{
+"ParkingLot" : "Dairy",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}{
+"ParkingLot" : "Poultry",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}{
+"ParkingLot" : "Mountain Lane",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}{
+"ParkingLot" : "Ornamental Horticulture",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}{
+"ParkingLot" : "Meat Processing",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}{
+"ParkingLot" : "Village Drive",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}{
+"ParkingLot" : "K1",
+"Hours" :{"Monday": [7, 5], "Tuesday": [7, 5], "Wednesday": [7, 5], "Thursday": [7, 5], "Friday": [7, 5], "Saturday": [7, 5], "Sunday": [7, 5]},
+"Location" : [0, 0],
+"HourlyRate" : 8.50
+}
