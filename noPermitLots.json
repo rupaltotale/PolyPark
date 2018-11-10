@@ -1,4 +1,4 @@
-{
+[{
 "ParkingLot": "A1",
 "Hours" :{"Monday": [7, 17], "Tuesday": [7, 17], "Wednesday": [7, 17], "Thursday": [7, 17], "Friday": [7, 17], "Saturday": [7, 17], "Sunday": [7, 17]},
 "Location" : [0, 0],
@@ -88,4 +88,4 @@
 "Hours" :{"Monday": [7, 17], "Tuesday": [7, 17], "Wednesday": [7, 17], "Thursday": [7, 17], "Friday": [7, 17], "Saturday": [7, 17], "Sunday": [7, 17]},
 "Location" : [0, 0],
 "HourlyRate" : 8.50
-}
+}]
