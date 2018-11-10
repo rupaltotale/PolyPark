@@ -4,23 +4,52 @@ import java.io.IOException;
 import java.util.Iterator;
 
 public class PermitFetcher {
-   private List<PermitLot> permit;
+   private List<PermitLot> permitLots;
    
    public PermitFetcher (String permitFile) {
       JSONParser parser = new JSONParser();
       JSONArray permitObjects = parser(new FileReader(permitFile));
-      for (JSONObject permitObject: permitObjects) {
-         permit.add(createPermitLot((String) permitObject.get("ParkingLot"),
-            (JSONArray) permitObject.get("Permits"), (JSONObject) 
-            permitObject.get("Hours"), (JSONArray) permitObject.get(
+      for (JSONObject permitObject : permitObjects) {
+         permitLots.add(createPermitLot(permitObject.getString(
+            "ParkingLot"), permitObject.getJSONArray("Permits"), 
+            permitObject.getJSONObject("Hours"), permitObject.getJSONArray(
             "Location")));
    }
 
    private static PermitLot createPermitLot(String name, JSONArray 
-      JSONpermits, JSONObject JSONhours, JSONArray JSONlocation) {
+      JSONPermits, JSONObject JSONHours, JSONArray JSONLocation) {
       List<String> permits = new ArrayList<>();
-      for (Object permit : JSONpermits) {
+      for (JSONValue permit : JSONpermits) {
          permits.add((String) permit);
       }
-      Hours hours = 
-      return new PermitLot(name, permitList, );
+      Hours hours = createHours(JSONHours);
+      
+      
+      return new PermitLot(name, permits, hours, location);
+
+   private static Hours createHours(JSONObject JSONHours) {
+      Hours hours = new Hours();
+      Iterator<String> keys = JSONHours.keys();
+      JSONArray period;
+
+      while(keys.hasNext()) {
+         String key = keys.next();
+         period = Hours.getJSONArray(key);
+         hours.addParkingHours(key, new TimePeriod(Time.convertDoubleToTime(
+            period.getDouble(0)), Time.convertDoubleToTime(
+            period.getDouble(1))));
+      }
+      return hours;
+   }
+
+   private static Location createLocation(JSONArray JSONLocation) {
+      return new Location(JSONLocation.getDouble(0),
+         JSONLocation.getDouble(1));
+   }
+
+   public List<PermitLot> getPotentialLots(String permit, String day, 
+      TimePeriod parkingPeriod) {
+      return permitLots.stream.filter(lot -> lot.canPark()).collect(
+         Collectors.toList());
+   }
+}
