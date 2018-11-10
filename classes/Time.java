@@ -7,11 +7,11 @@ public class Time {
    }
 
    public boolean isAfter(Time that) {
-      return that.hour < this.hour && that.minute < that.hour;
+      return that.hour <= this.hour && that.minute <= that.hour;
    }
 
    public boolean isBefore(Time that) {
-      return that.hour > this.hour && that.minute > that.hour;
+      return that.hour >= this.hour && that.minute >= that.hour;
    }
 
    public Time cloneThis() {
