@@ -29,6 +29,7 @@ def main():
                     "Poultry", "Mountain Lane", "Ornamental Horticulture",\
                     "Meat Processing", "Village Drive", "K1"]
     lotsList = createRandomLots(lotsNameList)
+    f.write("[")
     for i in range(len(lotsList)):
         stringDict = str(lotsList[i].hours)
         stringDict = stringDict.replace("'", '"')
@@ -36,6 +37,7 @@ def main():
             f.write('{\n"ParkingLot": "%s",\n"Hours" :%s,\n"Location" : %s,\n"HourlyRate" : %.2f\n}' % (lotsList[i].lotName, stringDict, lotsList[i].location, lotsList[i].hourlyRate))
         else:
             f.write('{\n"ParkingLot": "%s",\n"Hours" :%s,\n"Location" : %s,\n"HourlyRate" : %.2f\n},' % (lotsList[i].lotName, stringDict, lotsList[i].location, lotsList[i].hourlyRate))
+    f.write("]")
     f.close()
 
 if __name__ == '__main__':
