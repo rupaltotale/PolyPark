@@ -18,9 +18,9 @@ public class Time {
       return new Time(this.hour, this.minute);
    }
 
-   public Time convertDoubleToTime(double doubleTime) {
+   public static Time convertDoubleToTime(double doubleTime) {
       int hour = (int) doubleTime;
-      int minute = (doubleTime - hour) * 60;
+      int minute = (int) ((doubleTime - hour) * 60);
       return new Time(hour, minute);
    }
 }

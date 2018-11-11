@@ -11,5 +11,4 @@ public class NoPermitLot {
       this.location = location;
       this.hourlyRate = hourlyRate;
    }
-
-   
+} 
