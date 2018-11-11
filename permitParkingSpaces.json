@@ -1,70 +1,60 @@
 [{
 	"ParkingLot": "A1", 
-	"Permits" : ["ABC", "XYZ"], 
-	"Hours" : {"Monday": [1, 20], "Tuesday": [7, 14], "Wednesday": [7, 13], "Thursday": [10, 18], "Friday": [3, 22], "Saturday": [9, 23], "Sunday": [9, 22], },
-	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [94.00597479492525, 81.3275321718217]
+	"Permits" : ["ABC", "XYZ", "MNO"], 
+	"Hours" : {"Monday": [10, 15], "Tuesday": [10, 20], "Wednesday": [7, 22], "Thursday": [0, 23], "Friday": [8, 23], "Saturday": [0, 21], "Sunday": [9, 14], },
+	"Location" : [83.23881734889031, 73.29762873974947]
 },
 {
 	"ParkingLot": "A2", 
-	"Permits" : ["XYZ", "MNO"], 
-	"Hours" : {"Monday": [2, 18], "Tuesday": [6, 17], "Wednesday": [9, 16], "Thursday": [7, 20], "Friday": [0, 13], "Saturday": [8, 13], "Sunday": [5, 24], },
-	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [78.07849762369604, 62.46479603002308]
+	"Permits" : ["PQR", "EFG"], 
+	"Hours" : {"Monday": [12, 14], "Tuesday": [9, 18], "Wednesday": [1, 19], "Thursday": [8, 17], "Friday": [3, 18], "Saturday": [1, 18], "Sunday": [8, 21], },
+	"Location" : [96.59125766711686, 56.737292848971364]
 },
 {
 	"ParkingLot": "B1", 
-	"Permits" : ["EFG", "XYZ"], 
-	"Hours" : {"Monday": [4, 16], "Tuesday": [9, 22], "Wednesday": [11, 18], "Thursday": [5, 19], "Friday": [11, 18], "Saturday": [1, 14], "Sunday": [6, 12], },
-	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [26.359463084688617, 37.63515808024954]
+	"Permits" : ["MNO", "ABC"], 
+	"Hours" : {"Monday": [3, 17], "Tuesday": [11, 16], "Wednesday": [11, 23], "Thursday": [5, 15], "Friday": [1, 14], "Saturday": [4, 12], "Sunday": [6, 17], },
+	"Location" : [24.93588582519015, 76.95239232768868]
 },
 {
 	"ParkingLot": "B2", 
-	"Permits" : ["XYZ"], 
-	"Hours" : {"Monday": [5, 12], "Tuesday": [12, 16], "Wednesday": [5, 21], "Thursday": [0, 20], "Friday": [11, 22], "Saturday": [3, 17], "Sunday": [1, 17], },
-	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [95.84807893555696, 49.081909342203325]
+	"Permits" : ["PQR", "EFG"], 
+	"Hours" : {"Monday": [3, 16], "Tuesday": [6, 22], "Wednesday": [6, 12], "Thursday": [6, 20], "Friday": [2, 23], "Saturday": [5, 14], "Sunday": [2, 12], },
+	"Location" : [18.855331163080013, 13.730961886592464]
 },
 {
 	"ParkingLot": "C1", 
-	"Permits" : ["PQR"], 
-	"Hours" : {"Monday": [8, 23], "Tuesday": [7, 22], "Wednesday": [0, 14], "Thursday": [1, 17], "Friday": [2, 14], "Saturday": [0, 13], "Sunday": [12, 16], },
-	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [21.248308921040902, 99.85208273800129]
+	"Permits" : ["XYZ", "ABC", "EFG", "MNO"], 
+	"Hours" : {"Monday": [8, 16], "Tuesday": [5, 23], "Wednesday": [1, 23], "Thursday": [9, 20], "Friday": [10, 16], "Saturday": [0, 12], "Sunday": [5, 13], },
+	"Location" : [62.03261996994153, 62.3042690376722]
 },
 {
 	"ParkingLot": "C2", 
-	"Permits" : ["MNO"], 
-	"Hours" : {"Monday": [12, 20], "Tuesday": [9, 24], "Wednesday": [3, 20], "Thursday": [3, 23], "Friday": [4, 16], "Saturday": [0, 19], "Sunday": [0, 15], },
-	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [63.81247229427272, 98.13277883299024]
+	"Permits" : ["MNO", "XYZ", "ABC"], 
+	"Hours" : {"Monday": [0, 12], "Tuesday": [6, 18], "Wednesday": [5, 23], "Thursday": [2, 14], "Friday": [6, 17], "Saturday": [11, 24], "Sunday": [1, 22], },
+	"Location" : [48.98492313656251, 95.65027462230132]
 },
 {
 	"ParkingLot": "D1", 
-	"Permits" : ["ABC", "PQR", "EFG"], 
-	"Hours" : {"Monday": [2, 19], "Tuesday": [8, 20], "Wednesday": [4, 17], "Thursday": [4, 13], "Friday": [12, 14], "Saturday": [4, 23], "Sunday": [6, 13], },
-	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [40.62423876467647, 61.55038108849561]
+	"Permits" : ["PQR", "XYZ"], 
+	"Hours" : {"Monday": [10, 22], "Tuesday": [5, 21], "Wednesday": [4, 14], "Thursday": [1, 21], "Friday": [3, 19], "Saturday": [7, 23], "Sunday": [2, 14], },
+	"Location" : [18.119303004300814, 42.206501515868034]
 },
 {
 	"ParkingLot": "D2", 
-	"Permits" : ["EFG", "MNO", "XYZ", "ABC"], 
-	"Hours" : {"Monday": [8, 16], "Tuesday": [4, 24], "Wednesday": [8, 12], "Thursday": [8, 15], "Friday": [5, 20], "Saturday": [9, 12], "Sunday": [5, 19], },
-	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [20.171900027929233, 84.48012822881584]
+	"Permits" : ["PQR"], 
+	"Hours" : {"Monday": [0, 21], "Tuesday": [1, 23], "Wednesday": [12, 17], "Thursday": [9, 23], "Friday": [10, 21], "Saturday": [10, 16], "Sunday": [11, 19], },
+	"Location" : [39.697316616810554, 55.06065094576952]
 },
 {
 	"ParkingLot": "E1", 
-	"Permits" : ["EFG", "ABC", "PQR"], 
-	"Hours" : {"Monday": [11, 16], "Tuesday": [1, 14], "Wednesday": [0, 22], "Thursday": [5, 20], "Friday": [0, 18], "Saturday": [10, 19], "Sunday": [1, 21], },
-	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [32.84087602648358, 76.2545845261294]
+	"Permits" : ["EFG", "XYZ"], 
+	"Hours" : {"Monday": [5, 13], "Tuesday": [1, 15], "Wednesday": [8, 18], "Thursday": [9, 14], "Friday": [6, 21], "Saturday": [0, 16], "Sunday": [5, 24], },
+	"Location" : [15.69613457693153, 95.54659906098493]
 },
 {
 	"ParkingLot": "E2", 
-	"Permits" : ["MNO", "EFG"], 
-	"Hours" : {"Monday": [9, 21], "Tuesday": [11, 12], "Wednesday": [6, 15], "Thursday": [4, 18], "Friday": [0, 15], "Saturday": [8, 21], "Sunday": [7, 16], },
-	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [74.02204472490624, 53.5271610222447]
+	"Permits" : ["PQR", "XYZ"], 
+	"Hours" : {"Monday": [4, 23], "Tuesday": [10, 16], "Wednesday": [8, 13], "Thursday": [6, 21], "Friday": [6, 24], "Saturday": [11, 15], "Sunday": [1, 23], },
+	"Location" : [61.69159428972466, 55.15863059652697]
 }]

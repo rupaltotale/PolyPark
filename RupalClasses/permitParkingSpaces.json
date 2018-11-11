@@ -1,70 +1,90 @@
 [{
 	"ParkingLot": "A1", 
-	"Permits" : ["ABC", "XYZ"], 
-	"Hours" : {"Monday": [1, 20], "Tuesday": [7, 14], "Wednesday": [7, 13], "Thursday": [10, 18], "Friday": [3, 22], "Saturday": [9, 23], "Sunday": [9, 22], },
+	"Permits" : ["EFG", "MNO"], 
+	"Hours" : {"Monday": [2.0, 14.0], "Tuesday": [1.0, 24.0], "Wednesday": [6.0, 12.0], "Thursday": [7.0, 15.0], "Friday": [7.0, 18.0], "Saturday": [9.0, 21.0], "Sunday": [0.0, 24.0], },
 	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [94.00597479492525, 81.3275321718217]
+	"NoPermitAllowed" : "Yes",
+	"Rate" : 11,
+	"Location" : [11.363407937410852, 82.63815928888144]
 },
 {
 	"ParkingLot": "A2", 
 	"Permits" : ["XYZ", "MNO"], 
-	"Hours" : {"Monday": [2, 18], "Tuesday": [6, 17], "Wednesday": [9, 16], "Thursday": [7, 20], "Friday": [0, 13], "Saturday": [8, 13], "Sunday": [5, 24], },
+	"Hours" : {"Monday": [7.0, 17.0], "Tuesday": [12.0, 14.0], "Wednesday": [9.0, 23.0], "Thursday": [5.0, 16.0], "Friday": [5.0, 13.0], "Saturday": [9.0, 23.0], "Sunday": [9.0, 22.0], },
 	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [78.07849762369604, 62.46479603002308]
+	"NoPermitAllowed" : "No",
+	"Rate" : 14,
+	"Location" : [80.22345621035814, 83.62141835609265]
 },
 {
 	"ParkingLot": "B1", 
-	"Permits" : ["EFG", "XYZ"], 
-	"Hours" : {"Monday": [4, 16], "Tuesday": [9, 22], "Wednesday": [11, 18], "Thursday": [5, 19], "Friday": [11, 18], "Saturday": [1, 14], "Sunday": [6, 12], },
+	"Permits" : ["XYZ"], 
+	"Hours" : {"Monday": [7.0, 16.0], "Tuesday": [12.0, 14.0], "Wednesday": [4.0, 20.0], "Thursday": [10.0, 21.0], "Friday": [1.0, 23.0], "Saturday": [7.0, 23.0], "Sunday": [10.0, 21.0], },
 	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [26.359463084688617, 37.63515808024954]
+	"NoPermitAllowed" : "No",
+	"Rate" : 13,
+	"Location" : [90.35236874909789, 7.182518045297526]
 },
 {
 	"ParkingLot": "B2", 
-	"Permits" : ["XYZ"], 
-	"Hours" : {"Monday": [5, 12], "Tuesday": [12, 16], "Wednesday": [5, 21], "Thursday": [0, 20], "Friday": [11, 22], "Saturday": [3, 17], "Sunday": [1, 17], },
+	"Permits" : ["EFG", "XYZ"], 
+	"Hours" : {"Monday": [1.0, 13.0], "Tuesday": [12.0, 17.0], "Wednesday": [10.0, 23.0], "Thursday": [9.0, 20.0], "Friday": [9.0, 23.0], "Saturday": [2.0, 24.0], "Sunday": [10.0, 19.0], },
 	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [95.84807893555696, 49.081909342203325]
+	"NoPermitAllowed" : "No",
+	"Rate" : 14,
+	"Location" : [73.5008918736828, 37.91405787450813]
 },
 {
 	"ParkingLot": "C1", 
-	"Permits" : ["PQR"], 
-	"Hours" : {"Monday": [8, 23], "Tuesday": [7, 22], "Wednesday": [0, 14], "Thursday": [1, 17], "Friday": [2, 14], "Saturday": [0, 13], "Sunday": [12, 16], },
+	"Permits" : ["XYZ", "ABC"], 
+	"Hours" : {"Monday": [11.0, 14.0], "Tuesday": [3.0, 13.0], "Wednesday": [7.0, 13.0], "Thursday": [2.0, 15.0], "Friday": [8.0, 22.0], "Saturday": [9.0, 15.0], "Sunday": [8.0, 22.0], },
 	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [21.248308921040902, 99.85208273800129]
+	"NoPermitAllowed" : "Yes",
+	"Rate" : 12,
+	"Location" : [88.32672719316608, 10.346353097222726]
 },
 {
 	"ParkingLot": "C2", 
-	"Permits" : ["MNO"], 
-	"Hours" : {"Monday": [12, 20], "Tuesday": [9, 24], "Wednesday": [3, 20], "Thursday": [3, 23], "Friday": [4, 16], "Saturday": [0, 19], "Sunday": [0, 15], },
+	"Permits" : ["XYZ", "EFG"], 
+	"Hours" : {"Monday": [0.0, 18.0], "Tuesday": [0.0, 18.0], "Wednesday": [10.0, 13.0], "Thursday": [1.0, 22.0], "Friday": [3.0, 17.0], "Saturday": [7.0, 18.0], "Sunday": [8.0, 12.0], },
 	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [63.81247229427272, 98.13277883299024]
+	"NoPermitAllowed" : "No",
+	"Rate" : 12,
+	"Location" : [6.05315663932392, 81.4934271969783]
 },
 {
 	"ParkingLot": "D1", 
-	"Permits" : ["ABC", "PQR", "EFG"], 
-	"Hours" : {"Monday": [2, 19], "Tuesday": [8, 20], "Wednesday": [4, 17], "Thursday": [4, 13], "Friday": [12, 14], "Saturday": [4, 23], "Sunday": [6, 13], },
+	"Permits" : ["PQR"], 
+	"Hours" : {"Monday": [3.0, 19.0], "Tuesday": [2.0, 16.0], "Wednesday": [11.0, 14.0], "Thursday": [6.0, 21.0], "Friday": [11.0, 15.0], "Saturday": [12.0, 20.0], "Sunday": [3.0, 13.0], },
 	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [40.62423876467647, 61.55038108849561]
+	"NoPermitAllowed" : "Yes",
+	"Rate" : 12,
+	"Location" : [92.06030986762785, 99.71952803026949]
 },
 {
 	"ParkingLot": "D2", 
-	"Permits" : ["EFG", "MNO", "XYZ", "ABC"], 
-	"Hours" : {"Monday": [8, 16], "Tuesday": [4, 24], "Wednesday": [8, 12], "Thursday": [8, 15], "Friday": [5, 20], "Saturday": [9, 12], "Sunday": [5, 19], },
+	"Permits" : ["XYZ"], 
+	"Hours" : {"Monday": [0.0, 20.0], "Tuesday": [1.0, 20.0], "Wednesday": [8.0, 24.0], "Thursday": [12.0, 19.0], "Friday": [0.0, 23.0], "Saturday": [0.0, 20.0], "Sunday": [7.0, 19.0], },
 	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [20.171900027929233, 84.48012822881584]
+	"NoPermitAllowed" : "No",
+	"Rate" : 14,
+	"Location" : [72.42877885169864, 68.86653672199327]
 },
 {
 	"ParkingLot": "E1", 
-	"Permits" : ["EFG", "ABC", "PQR"], 
-	"Hours" : {"Monday": [11, 16], "Tuesday": [1, 14], "Wednesday": [0, 22], "Thursday": [5, 20], "Friday": [0, 18], "Saturday": [10, 19], "Sunday": [1, 21], },
+	"Permits" : ["EFG"], 
+	"Hours" : {"Monday": [2.0, 22.0], "Tuesday": [11.0, 22.0], "Wednesday": [9.0, 15.0], "Thursday": [12.0, 24.0], "Friday": [3.0, 17.0], "Saturday": [7.0, 16.0], "Sunday": [12.0, 24.0], },
 	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [32.84087602648358, 76.2545845261294]
+	"NoPermitAllowed" : "Yes",
+	"Rate" : 12,
+	"Location" : [30.617249658456668, 42.29126458247474]
 },
 {
 	"ParkingLot": "E2", 
-	"Permits" : ["MNO", "EFG"], 
-	"Hours" : {"Monday": [9, 21], "Tuesday": [11, 12], "Wednesday": [6, 15], "Thursday": [4, 18], "Friday": [0, 15], "Saturday": [8, 21], "Sunday": [7, 16], },
+	"Permits" : ["PQR", "EFG"], 
+	"Hours" : {"Monday": [1.0, 12.0], "Tuesday": [2.0, 16.0], "Wednesday": [11.0, 15.0], "Thursday": [11.0, 20.0], "Friday": [4.0, 12.0], "Saturday": [4.0, 18.0], "Sunday": [3.0, 20.0], },
 	"Info" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-	"Location" : [74.02204472490624, 53.5271610222447]
+	"NoPermitAllowed" : "No",
+	"Rate" : 13,
+	"Location" : [66.7662286263177, 37.56092545367339]
 }]

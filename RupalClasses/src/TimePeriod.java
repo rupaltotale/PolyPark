@@ -19,9 +19,9 @@ public class TimePeriod {
 	}
 
 	public TimePeriod(Time start, Time end) {
-		if (!start.isBefore(end)) {
-			throw new java.lang.IllegalArgumentException();
-		}
+//		if (!start.isBefore(end)) {
+//			throw new java.lang.IllegalArgumentException();
+//		}
 		this.start = start;
 		this.end = end;
 	}
