@@ -12,57 +12,48 @@ public class noPermitFetcher {
 	public static void main(String[] args) throws FileNotFoundException, IOException, ParseException {
 		Time start = new Time(13.5);
 		Time end = new Time(15.5);
-		TimePeriod tp = new TimePeriod(start, end);
 		String permit = "ABC";
 		String day = "Tuesday";
-		getParkingSpaces(permit, tp, day);
+		getParkingSpaces(permit, start, end, day);
 	}
 
-	public static void getParkingSpaces(String permit, TimePeriod tp, String day)
+	public static void getParkingSpaces(String permit, Time startReq, Time endReq, String day)
 			throws FileNotFoundException, IOException, ParseException {
 		ArrayList<PermitLot> lots = new ArrayList<PermitLot>();
 
 		JSONParser parser = new JSONParser();
-		JSONArray a = (JSONArray) parser.parse(new FileReader("permitParkingSpaces.json"));
+		JSONArray a = (JSONArray) parser.parse(new FileReader("noPermitLots.json"));
 
 		for (Object o : a) {
 			JSONObject parkingSpace = (JSONObject) o;
-			// Checks if parking lot fits criteria
+			// Checks if parking lot fits criteria --> Checks time criteria
 			boolean potentialLot = true;
-			
-			// Checks permit criteria
-			ArrayList<String> permits = new ArrayList<>();
-			for (String i : (String[]) parkingSpace.get("Permits")) {
-				permits.add(i);
+
+			double[] time = { 0, 0 };
+			JSONObject obj = (JSONObject) parkingSpace.get("Hours");
+			JSONArray obj2 = (JSONArray) obj.get(day);
+			for (int i = 0; i < 2; i++) {
+				time[i] = (double) obj2.get(i);
 			}
-			if (permits.indexOf(permit) == -1) {
+			double start = (double) time[0];
+			double end = (double) time[1];
+
+			if (startReq.getDecimalTime() < start || endReq.getDecimalTime() > end) {
 				potentialLot = false;
-			} 
-			// Checks time criteria
-			else {
-				Time startReq = tp.getStart();
-				Time endReq = tp.getEnd();
-				
-				double[] time = (double[])((JSONObject)parkingSpace.get("Hours")).get(day);
-				double start = (double)time[0];
-				double end = (double)time[1];
-				
-				if (!(startReq.getDecimalTime() <= start && endReq.getDecimalTime() >= end)) {
-					potentialLot = false;
-				}
 			}
 
 			if (potentialLot) {
 				String lot = (String) parkingSpace.get("ParkingLot");
 
-				double[] location = (double[]) parkingSpace.get("Location");
-				Location loc = new Location(location[0], location[1]);
+				JSONArray location = (JSONArray) parkingSpace.get("Location");
+				Location loc = new Location((double) location.get(0), (double) location.get(1));
 
 				String info = (String) parkingSpace.get("Info");
-				
-				lots.add(new PermitLot(lot, info, loc));
-				
-				
+
+				PermitLot permitLot = new PermitLot(lot, info, loc);
+				lots.add(permitLot);
+
+				System.out.println(permitLot);
 			}
 		}
 	}
