@@ -1,6 +1,8 @@
 package com.slohack.lizhengzheng.polypark;
 
 
+
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -50,20 +52,39 @@ public class Main_Page extends AppCompatActivity implements AdapterView.OnItemSe
         EndTime = (EditText) findViewById(R.id.EndTime);
         submitButton = (Button) findViewById(R.id.button);
 
-        submitButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                String starTtime = StartTime.getText().toString();
-                String enEtime = EndTime.getText().toString();
-                starttime = Double.parseDouble(starTtime.substring(0, 2))/
-                        Double.parseDouble(starTtime.substring(3, 5));
-                endtime =  Double.parseDouble(enEtime.substring(0, 2))/
-                        Double.parseDouble(enEtime.substring(3, 5));
-
-                showToast(String.valueOf(starttime));
-                showToast(String.valueOf(endtime));
-            }
-        });
     }
+
+
+
+    private void showToast(String text) {
+        Toast.makeText(Main_Page.this, text, Toast.LENGTH_SHORT).show();
+    }
+
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View v, int position,
+                               long id) {
+        String text = parent.getItemAtPosition(position).toString();
+        showToast(text);
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> arg0) {
+
+    }
+
+
+    public void openAboutActivity(View v) {
+        String starTtime = StartTime.getText().toString();
+        String enEtime = EndTime.getText().toString();
+        starttime = Double.parseDouble(starTtime.substring(0, 2))+
+                Double.parseDouble(starTtime.substring(3, 5))/60;
+        endtime =  Double.parseDouble(enEtime.substring(0, 2))/
+                Double.parseDouble(enEtime.substring(3, 5))/60;
+
+        Intent intent = new Intent(this, AboutActivity.class);
+        startActivity(intent);
+
+    }
+}
 
