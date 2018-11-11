@@ -20,6 +20,7 @@ public class Fetcher {
 	}
 
 	public static ArrayList<PermitLot> getParkingSpaces(String permit, Time startReq, Time endReq, String day, boolean hasPermit, boolean showAllNoPermits)
+
 			throws FileNotFoundException, IOException, ParseException {
 		ArrayList<PermitLot> lots = new ArrayList<PermitLot>();
 
