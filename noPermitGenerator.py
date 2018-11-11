@@ -9,13 +9,13 @@ class NoPermitLot:
 
 def createRandomLots(lotNameList):
     lotsList = []
-    hoursDict = {"Monday" : [7,5],\
-                 "Tuesday" : [7,5],\
-                 "Wednesday" : [7,5],\
-                 "Thursday" : [7,5],\
-                 "Friday" : [7,5],\
-                 "Saturday" : [7,5],\
-                 "Sunday" : [7,5]}
+    hoursDict = {"Monday" : [7.0,17.0],\
+                 "Tuesday" : [7.0,17.0],\
+                 "Wednesday" : [7.0,17.0],\
+                 "Thursday" : [7.0,17.0],\
+                 "Friday" : [7.0,17.0],\
+                 "Saturday" : [7.0,17.0],\
+                 "Sunday" : [7.0,17.0]}
     for lotName in lotNameList:
         lot = NoPermitLot(lotName, hoursDict, [0, 0], 8.50)
         lotsList.append(lot);
@@ -29,10 +29,15 @@ def main():
                     "Poultry", "Mountain Lane", "Ornamental Horticulture",\
                     "Meat Processing", "Village Drive", "K1"]
     lotsList = createRandomLots(lotsNameList)
-    for lot in lotsList:
-        stringDict = str(lot.hours)
+    f.write("[")
+    for i in range(len(lotsList)):
+        stringDict = str(lotsList[i].hours)
         stringDict = stringDict.replace("'", '"')
-        f.write('{\n"ParkingLot" : "%s",\n"Hours" :%s,\n"Location" : %s,\n"HourlyRate" : %.2f\n}' % (lot.lotName, stringDict, lot.location, lot.hourlyRate))
+        if i == len(lotsList) - 1:
+            f.write('{\n"ParkingLot": "%s",\n"Hours" :%s,\n"Location" : %s,\n"HourlyRate" : %.2f\n}' % (lotsList[i].lotName, stringDict, lotsList[i].location, lotsList[i].hourlyRate))
+        else:
+            f.write('{\n"ParkingLot": "%s",\n"Hours" :%s,\n"Location" : %s,\n"HourlyRate" : %.2f\n},' % (lotsList[i].lotName, stringDict, lotsList[i].location, lotsList[i].hourlyRate))
+    f.write("]")
     f.close()
 
 if __name__ == '__main__':

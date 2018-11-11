@@ -1,60 +1,60 @@
 [{
 	"ParkingLot": "A1", 
-	"Permits" : ["ABC", "PQR"], 
-	"Hours" : {"Monday": [3, 12], "Tuesday": [9, 15], "Wednesday": [2, 24], "Thursday": [5, 24], "Friday": [7, 14], "Saturday": [11, 22], "Sunday": [10, 13], },
-	"Location" : [74.06385840554385, 89.7160802911853]
+	"Permits" : ["ABC", "XYZ", "MNO"], 
+	"Hours" : {"Monday": [10, 15], "Tuesday": [10, 20], "Wednesday": [7, 22], "Thursday": [0, 23], "Friday": [8, 23], "Saturday": [0, 21], "Sunday": [9, 14], },
+	"Location" : [83.23881734889031, 73.29762873974947]
 },
 {
 	"ParkingLot": "A2", 
-	"Permits" : ["XYZ"], 
-	"Hours" : {"Monday": [3, 15], "Tuesday": [7, 14], "Wednesday": [6, 19], "Thursday": [1, 17], "Friday": [4, 15], "Saturday": [1, 20], "Sunday": [10, 13], },
-	"Location" : [42.16667297070268, 20.70293111893816]
+	"Permits" : ["PQR", "EFG"], 
+	"Hours" : {"Monday": [12, 14], "Tuesday": [9, 18], "Wednesday": [1, 19], "Thursday": [8, 17], "Friday": [3, 18], "Saturday": [1, 18], "Sunday": [8, 21], },
+	"Location" : [96.59125766711686, 56.737292848971364]
 },
 {
 	"ParkingLot": "B1", 
-	"Permits" : ["ABC", "MNO", "EFG"], 
-	"Hours" : {"Monday": [1, 22], "Tuesday": [0, 13], "Wednesday": [7, 15], "Thursday": [1, 19], "Friday": [12, 23], "Saturday": [11, 20], "Sunday": [8, 24], },
-	"Location" : [60.64557553477452, 44.18070524432047]
+	"Permits" : ["MNO", "ABC"], 
+	"Hours" : {"Monday": [3, 17], "Tuesday": [11, 16], "Wednesday": [11, 23], "Thursday": [5, 15], "Friday": [1, 14], "Saturday": [4, 12], "Sunday": [6, 17], },
+	"Location" : [24.93588582519015, 76.95239232768868]
 },
 {
 	"ParkingLot": "B2", 
-	"Permits" : ["EFG"], 
-	"Hours" : {"Monday": [11, 16], "Tuesday": [11, 19], "Wednesday": [7, 23], "Thursday": [10, 24], "Friday": [12, 17], "Saturday": [5, 13], "Sunday": [4, 22], },
-	"Location" : [74.33736119498235, 88.79508661235]
+	"Permits" : ["PQR", "EFG"], 
+	"Hours" : {"Monday": [3, 16], "Tuesday": [6, 22], "Wednesday": [6, 12], "Thursday": [6, 20], "Friday": [2, 23], "Saturday": [5, 14], "Sunday": [2, 12], },
+	"Location" : [18.855331163080013, 13.730961886592464]
 },
 {
 	"ParkingLot": "C1", 
-	"Permits" : ["XYZ", "PQR", "MNO"], 
-	"Hours" : {"Monday": [12, 20], "Tuesday": [6, 23], "Wednesday": [10, 16], "Thursday": [5, 22], "Friday": [11, 20], "Saturday": [7, 13], "Sunday": [5, 24], },
-	"Location" : [66.57871411765863, 29.14951141888138]
+	"Permits" : ["XYZ", "ABC", "EFG", "MNO"], 
+	"Hours" : {"Monday": [8, 16], "Tuesday": [5, 23], "Wednesday": [1, 23], "Thursday": [9, 20], "Friday": [10, 16], "Saturday": [0, 12], "Sunday": [5, 13], },
+	"Location" : [62.03261996994153, 62.3042690376722]
 },
 {
 	"ParkingLot": "C2", 
-	"Permits" : ["EFG", "ABC", "MNO"], 
-	"Hours" : {"Monday": [6, 24], "Tuesday": [3, 24], "Wednesday": [6, 22], "Thursday": [6, 17], "Friday": [10, 24], "Saturday": [6, 14], "Sunday": [9, 16], },
-	"Location" : [3.5768917934344113, 71.07274042508634]
+	"Permits" : ["MNO", "XYZ", "ABC"], 
+	"Hours" : {"Monday": [0, 12], "Tuesday": [6, 18], "Wednesday": [5, 23], "Thursday": [2, 14], "Friday": [6, 17], "Saturday": [11, 24], "Sunday": [1, 22], },
+	"Location" : [48.98492313656251, 95.65027462230132]
 },
 {
 	"ParkingLot": "D1", 
-	"Permits" : ["PQR", "XYZ", "MNO"], 
-	"Hours" : {"Monday": [0, 19], "Tuesday": [9, 15], "Wednesday": [9, 14], "Thursday": [9, 12], "Friday": [10, 14], "Saturday": [0, 24], "Sunday": [3, 22], },
-	"Location" : [8.261193479817596, 52.28363770088104]
+	"Permits" : ["PQR", "XYZ"], 
+	"Hours" : {"Monday": [10, 22], "Tuesday": [5, 21], "Wednesday": [4, 14], "Thursday": [1, 21], "Friday": [3, 19], "Saturday": [7, 23], "Sunday": [2, 14], },
+	"Location" : [18.119303004300814, 42.206501515868034]
 },
 {
 	"ParkingLot": "D2", 
-	"Permits" : ["EFG", "MNO"], 
-	"Hours" : {"Monday": [6, 15], "Tuesday": [7, 20], "Wednesday": [1, 22], "Thursday": [1, 24], "Friday": [6, 22], "Saturday": [6, 14], "Sunday": [1, 24], },
-	"Location" : [61.44847796346108, 94.52565440235573]
+	"Permits" : ["PQR"], 
+	"Hours" : {"Monday": [0, 21], "Tuesday": [1, 23], "Wednesday": [12, 17], "Thursday": [9, 23], "Friday": [10, 21], "Saturday": [10, 16], "Sunday": [11, 19], },
+	"Location" : [39.697316616810554, 55.06065094576952]
 },
 {
 	"ParkingLot": "E1", 
-	"Permits" : ["XYZ", "MNO", "PQR"], 
-	"Hours" : {"Monday": [5, 20], "Tuesday": [2, 21], "Wednesday": [1, 13], "Thursday": [2, 13], "Friday": [9, 15], "Saturday": [0, 23], "Sunday": [8, 15], },
-	"Location" : [33.11063528303869, 38.17448182248582]
+	"Permits" : ["EFG", "XYZ"], 
+	"Hours" : {"Monday": [5, 13], "Tuesday": [1, 15], "Wednesday": [8, 18], "Thursday": [9, 14], "Friday": [6, 21], "Saturday": [0, 16], "Sunday": [5, 24], },
+	"Location" : [15.69613457693153, 95.54659906098493]
 },
 {
 	"ParkingLot": "E2", 
-	"Permits" : ["EFG", "ABC", "XYZ"], 
-	"Hours" : {"Monday": [0, 14], "Tuesday": [2, 24], "Wednesday": [2, 20], "Thursday": [1, 16], "Friday": [8, 17], "Saturday": [7, 14], "Sunday": [8, 16], },
-	"Location" : [74.15569317397008, 2.8932727491931765]
+	"Permits" : ["PQR", "XYZ"], 
+	"Hours" : {"Monday": [4, 23], "Tuesday": [10, 16], "Wednesday": [8, 13], "Thursday": [6, 21], "Friday": [6, 24], "Saturday": [11, 15], "Sunday": [1, 23], },
+	"Location" : [61.69159428972466, 55.15863059652697]
 }]
