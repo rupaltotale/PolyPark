@@ -1,3 +1,4 @@
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -15,10 +16,10 @@ public class Fetcher {
 		String permit = "ABC";
 		String day = "Tuesday";
 		boolean hasPermit = false;
-		getParkingSpaces(permit, start, end, day, hasPermit);
+		System.out.println(getParkingSpaces(permit, start, end, day, hasPermit, false));
 	}
 
-	public static void getParkingSpaces(String permit, Time startReq, Time endReq, String day, boolean hasPermit)
+	public static ArrayList<PermitLot> getParkingSpaces(String permit, Time startReq, Time endReq, String day, boolean hasPermit, boolean showAllNoPermits)
 			throws FileNotFoundException, IOException, ParseException {
 		ArrayList<PermitLot> lots = new ArrayList<PermitLot>();
 
@@ -48,20 +49,20 @@ public class Fetcher {
 				}
 			}
 			// Checks time criteria
+			if (!showAllNoPermits) {
+				double[] time = {0, 0};
+				JSONObject obj = (JSONObject) parkingSpace.get("Hours");
+				JSONArray obj2 = (JSONArray) obj.get(day);
+				for (int i = 0; i < 2; i++) {
+					time[i] = (double) obj2.get(i);
+				}
+				double start = (double) time[0];
+				double end = (double) time[1];
 
-			double[] time = { 0, 0 };
-			JSONObject obj = (JSONObject) parkingSpace.get("Hours");
-			JSONArray obj2 = (JSONArray) obj.get(day);
-			for (int i = 0; i < 2; i++) {
-				time[i] = (double) obj2.get(i);
+				if (startReq.getDecimalTime() < start || endReq.getDecimalTime() > end) {
+					potentialLot = false;
+				}
 			}
-			double start = (double) time[0];
-			double end = (double) time[1];
-
-			if (startReq.getDecimalTime() < start || endReq.getDecimalTime() > end) {
-				potentialLot = false;
-			}
-
 			if (potentialLot) {
 				String lot = (String) parkingSpace.get("ParkingLot");
 
@@ -81,5 +82,6 @@ public class Fetcher {
 				System.out.println(permitLot);
 			}
 		}
+		return lots;
 	}
 }

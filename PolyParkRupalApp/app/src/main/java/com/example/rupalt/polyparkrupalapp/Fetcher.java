@@ -1,8 +1,14 @@
 package com.example.rupalt.polyparkrupalapp;
 
+import android.content.Context;
+import android.content.res.AssetManager;
+
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import org.json.simple.JSONArray;
@@ -17,16 +23,22 @@ public class Fetcher {
 		String permit = "ABC";
 		String day = "Tuesday";
 		boolean hasPermit = false;
-		getParkingSpaces(permit, start, end, day, hasPermit);
+//		getParkingSpaces(this, permit, start, end, day, hasPermit, false);
 	}
 
-	public static void getParkingSpaces(String permit, Time startReq, Time endReq, String day, boolean hasPermit)
+	public static ArrayList<PermitLot> getParkingSpaces(Context context, String permit, Time startReq, Time endReq, String day, boolean hasPermit, boolean showAllNoPermits)
 			throws FileNotFoundException, IOException, ParseException {
-		ArrayList<PermitLot> lots = new ArrayList<PermitLot>();
 
 		JSONParser parser = new JSONParser();
-		JSONArray a = (JSONArray) parser.parse(new FileReader("permitParkingSpaces.json"));
+		InputStream is = context.getAssets().open("permitParkingSpaces.json");
+		int size = is.available();
+		byte[] buffer = new byte[size];
+		is.read(buffer);
+		is.close();
+		String json = new String(buffer, "UTF-8");
+		JSONArray a = (JSONArray) parser.parse(json);
 
+		ArrayList<PermitLot> lots = new ArrayList<PermitLot>();
 		for (Object o : a) {
 			JSONObject parkingSpace = (JSONObject) o;
 			// Checks if parking lot fits criteria
@@ -50,20 +62,20 @@ public class Fetcher {
 				}
 			}
 			// Checks time criteria
+			if (!showAllNoPermits) {
+				double[] time = {0, 0};
+				JSONObject obj = (JSONObject) parkingSpace.get("Hours");
+				JSONArray obj2 = (JSONArray) obj.get(day);
+				for (int i = 0; i < 2; i++) {
+					time[i] = (double) obj2.get(i);
+				}
+				double start = (double) time[0];
+				double end = (double) time[1];
 
-			double[] time = { 0, 0 };
-			JSONObject obj = (JSONObject) parkingSpace.get("Hours");
-			JSONArray obj2 = (JSONArray) obj.get(day);
-			for (int i = 0; i < 2; i++) {
-				time[i] = (double) obj2.get(i);
+				if (startReq.getDecimalTime() < start || endReq.getDecimalTime() > end) {
+					potentialLot = false;
+				}
 			}
-			double start = (double) time[0];
-			double end = (double) time[1];
-
-			if (startReq.getDecimalTime() < start || endReq.getDecimalTime() > end) {
-				potentialLot = false;
-			}
-
 			if (potentialLot) {
 				String lot = (String) parkingSpace.get("ParkingLot");
 
@@ -83,5 +95,6 @@ public class Fetcher {
 				System.out.println(permitLot);
 			}
 		}
+		return lots;
 	}
 }

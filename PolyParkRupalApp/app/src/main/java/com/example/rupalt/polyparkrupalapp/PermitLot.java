@@ -29,7 +29,21 @@ public class PermitLot {
 		str += "Rate: " + rate + "\n";
 		return str;
 	}
-	
-	
-	
+
+
+	public String getLot() {
+		return lot;
+	}
+
+	public String getInfo() {
+		return info;
+	}
+
+	public Location getLoc() {
+		return loc;
+	}
+
+	public long getRate() {
+		return rate;
+	}
 }
