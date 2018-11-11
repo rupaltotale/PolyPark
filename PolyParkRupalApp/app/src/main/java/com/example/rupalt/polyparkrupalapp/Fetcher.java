@@ -1,3 +1,5 @@
+package com.example.rupalt.polyparkrupalapp;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -8,26 +10,46 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-public class noPermitFetcher {
+public class Fetcher {
 	public static void main(String[] args) throws FileNotFoundException, IOException, ParseException {
 		Time start = new Time(13.5);
 		Time end = new Time(15.5);
 		String permit = "ABC";
 		String day = "Tuesday";
-		getParkingSpaces(permit, start, end, day);
+		boolean hasPermit = false;
+		getParkingSpaces(permit, start, end, day, hasPermit);
 	}
 
-	public static void getParkingSpaces(String permit, Time startReq, Time endReq, String day)
+	public static void getParkingSpaces(String permit, Time startReq, Time endReq, String day, boolean hasPermit)
 			throws FileNotFoundException, IOException, ParseException {
 		ArrayList<PermitLot> lots = new ArrayList<PermitLot>();
 
 		JSONParser parser = new JSONParser();
-		JSONArray a = (JSONArray) parser.parse(new FileReader("noPermitLots.json"));
+		JSONArray a = (JSONArray) parser.parse(new FileReader("permitParkingSpaces.json"));
 
 		for (Object o : a) {
 			JSONObject parkingSpace = (JSONObject) o;
-			// Checks if parking lot fits criteria --> Checks time criteria
+			// Checks if parking lot fits criteria
 			boolean potentialLot = true;
+
+			// Checks permit criteria
+			if (hasPermit) {
+				ArrayList<String> permits = new ArrayList<>();
+				JSONArray jPermits = (JSONArray) parkingSpace.get("Permits");
+				for (Object i : jPermits) {
+					permits.add((String) i);
+				}
+				if (permits.indexOf(permit) == -1) {
+					potentialLot = false;
+				}
+			} else {
+
+				String noPermitAllowed = (String) parkingSpace.get("NoPermitAllowed");
+				if (noPermitAllowed.equals("No")) {
+					potentialLot = false;
+				}
+			}
+			// Checks time criteria
 
 			double[] time = { 0, 0 };
 			JSONObject obj = (JSONObject) parkingSpace.get("Hours");
@@ -49,8 +71,13 @@ public class noPermitFetcher {
 				Location loc = new Location((double) location.get(0), (double) location.get(1));
 
 				String info = (String) parkingSpace.get("Info");
-
-				PermitLot permitLot = new PermitLot(lot, info, loc);
+				PermitLot permitLot = null;
+				if (hasPermit) {
+					permitLot = new PermitLot(lot, info, loc);
+				} else {
+					long rate = (Long) parkingSpace.get("Rate");
+					permitLot = new PermitLot(lot, info, loc, rate);
+				}
 				lots.add(permitLot);
 
 				System.out.println(permitLot);
