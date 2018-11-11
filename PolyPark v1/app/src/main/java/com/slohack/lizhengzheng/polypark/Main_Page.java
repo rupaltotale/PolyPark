@@ -67,24 +67,3 @@ public class Main_Page extends AppCompatActivity implements AdapterView.OnItemSe
         });
     }
 
-
-
-    private void showToast(String text) {
-        Toast.makeText(Main_Page.this, text, Toast.LENGTH_SHORT).show();
-    }
-
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View v, int position,
-                               long id) {
-        String text = parent.getItemAtPosition(position).toString();
-        showToast(text);
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> arg0) {
-
-    }
-
-}
-
