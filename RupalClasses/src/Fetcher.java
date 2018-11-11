@@ -18,7 +18,7 @@ public class Fetcher {
 		getParkingSpaces(permit, start, end, day, hasPermit);
 	}
 
-	public static void getParkingSpaces(String permit, Time startReq, Time endReq, String day, boolean hasPermit)
+	public static List<PermitLot> getParkingSpaces(String permit, Time startReq, Time endReq, String day, boolean hasPermit)
 			throws FileNotFoundException, IOException, ParseException {
 		ArrayList<PermitLot> lots = new ArrayList<PermitLot>();
 
@@ -81,5 +81,6 @@ public class Fetcher {
 				System.out.println(permitLot);
 			}
 		}
+      return lots;
 	}
 }
