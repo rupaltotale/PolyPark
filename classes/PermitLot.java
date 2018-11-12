@@ -1,25 +1,24 @@
-import java.util.*;
+import java.util.List;
 
-public class PermitLot {
-   private String name;
+public class PermitLot extends Lot {
    private List<String> permits;
-   private Hours hours;
-   private Location location;
 
-   public PermitLot(String name, List<String> permits, Hours hours,
-      Location location) {
-      this.name = name;
+   public PermitLot(String name, Hours hours, Location location,
+      List<String> permits) {
+      super(name, hours, location);
       this.permits = permits;
-      this.hours = hours;
-      this.location = location;
    }
 
-   public String getName() {
-      return this.name;
+   public List<String> getPermits() {
+      return this.permits;
+   }
+
+   public void setPermits(List<String> newPermits) {
+      this.permits = permits;
    }
 
    private boolean permitIsValid(String permit) {
-      return permits.contains(permit);
+      return this.permits.contains(permit);
    }
 
    private boolean isOpen(String day, TimePeriod period) {
@@ -28,5 +27,17 @@ public class PermitLot {
 
    public boolean canPark(String permit, String day, TimePeriod period) {
       return this.permitIsValid(permit) && this.isOpen(day, period);
+   }
+
+   @Override
+   public String toString() {
+      String result = "";
+      result = result.concat(String.format("Lot: " + this.name +
+         "\nValid Permits:"));
+      for (String permit : this.permits) {
+         result = result.concat(String.format(" " + permit));
+      }
+      result = result.concat(String.format("\nOpen: \n" + this.hours));
+      return result;
    }
 }

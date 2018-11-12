@@ -1,14 +1,13 @@
-public class NoPermitLot {
-   private String name;
-   private Hours hours;
-   private Location location;
+public class NoPermitLot extends Lot {
    private double hourlyRate;
 
    public NoPermitLot(String name, Hours hours, Location location, double
       hourlyRate) {
-      this.name = name;
-      this.hours = hours;
-      this.location = location;
+      super(name, hours, location);
       this.hourlyRate = hourlyRate;
+   }
+
+   public boolean canPark(String day, TimePeriod period) {
+      return this.hours.isOpen(day, period);
    }
 } 
